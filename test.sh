@@ -11,7 +11,7 @@ while true; do
   UP=$(echo $R | sed -n -e 's/.*Upload: \([0-9\.]*\).*/\1/p')
 
   echo -n "$(date "$DF") "
-  echo $R | tr '\n' ''
+  echo $R | tr '\n' ' '
 
   echo "speedtest.ping:$PING|g" | nc -u -w0 $STATSD_HOST $STATSD_PORT
   echo "speedtest.down:$DOWN|g" | nc -u -w0 $STATSD_HOST $STATSD_PORT
