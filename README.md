@@ -19,7 +19,9 @@ docker logs speedtest
 ```
 
 ### Remove container
+```
 docker rm speedtest
+```
 
 ## Need a statsd server?
 ```
